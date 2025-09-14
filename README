@@ -9,3 +9,7 @@ Launch libManagment:
 
 cd build
 ./library_app
+
+Clang format:
+
+clang-format -i *.cpp *.h
