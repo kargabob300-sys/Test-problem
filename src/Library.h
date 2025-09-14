@@ -1,6 +1,7 @@
 #pragma once
 #include <unordered_map>
 #include <memory>
+#include <string>
 #include "Book.h"
 #include "User.h"
 
@@ -16,4 +17,15 @@ public:
 
     void addUser(const std::shared_ptr<User>& user);
     std::shared_ptr<User> findUser(const std::string& id);
+
+    // console helpers
+    void listBooks() const;
+    void listUsers() const;
+
+    // borrowing operations (date format YYYY-MM-DD)
+    bool borrowBook(const std::string& userId, const std::string& isbn, const std::string& date);
+    bool returnBook(const std::string& userId, const std::string& isbn);
+
+    // show overdue items as of currentDate (YYYY-MM-DD)
+    void showOverdue(const std::string& currentDate) const;
 };

@@ -1,0 +1,11 @@
+Compilation:
+
+mkdir build
+cd build
+cmake ..
+cmake --build . --target library_app
+
+Launch libManagment:
+
+cd build
+./library_app
