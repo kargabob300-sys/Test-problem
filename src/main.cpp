@@ -1,9 +1,10 @@
 #include "src.h"
 
+#include <ctime>
+#include <iomanip>
 #include <iostream>
 #include <limits>
 #include <memory>
-#include <string>
 
 int main()
 {
@@ -89,6 +90,10 @@ int main()
       std::getline(std::cin, isbn);
       std::cout << "Borrow date (YYYY-MM-DD): ";
       std::getline(std::cin, date);
+
+      if (!validateBorrowDate(date))
+        continue;
+
       if (library.borrowBook(userId, isbn, date))
         std::cout << "Book borrowed.\n";
       else

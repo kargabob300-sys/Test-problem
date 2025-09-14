@@ -13,6 +13,7 @@ set(SOURCES
     src/Faculty.cpp
     src/Guest.cpp
     src/Library.cpp
+    src/DateUtils.cpp
     src/main.cpp
 )
 
